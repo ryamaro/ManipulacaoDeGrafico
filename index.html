@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="txtTitulo">Titulo:</label>
+    <input type="text" name="txtTitulo" id="txtTitulo" value="Titulo">
+    <button onclick="atualizarTitulo()">🔄</button>
+    <br>
+    <label for="txtTitulo">Legenda:</label>
+    <input type="text" name="txtLegenda" id="txtLegenda" value="Legenda">
+    <button onclick="atualizarLegenda()">🔄</button>
+    <br>
+    <br>
+    <label for="txtTitulo">Eixo Horizontal:</label>
+    <input type="text" name="txtEixoH" id="txtEixoH">
+    <br>
+    <label for="txtTitulo">Valor:</label>
+    <input type="text" name="txtValores" id="txtValores">
+
+    <br>
+    <br>
+
+    <button onclick="adicionar()">GERAR</button>
+
+    <br>
+    <br>
+    <br>
+    <select onchange="preencherCampos()" name="slctEixoH" id="slctEixoH">
+        <option value="">Editar</option>
+    </select>
+    <br>
+    <label for="txtTitulo">Eixo Horizontal:</label>
+    <input type="text" name="txtEditarEixoH" id="txtEditarEixoH">
+    <br>
+    <label for="txtTitulo">Valor:</label>
+    <input type="text" name="txtEditarValores" id="txtEditarValores">
+    <br>
+    <input type="hidden" name="txtIndex" id="txtIndex">
+    <button onclick="atualizar()">Atualizar</button>
+    <br><br>
+
+    <div style="height: 300px; width: 500px;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+
+</body>
+
+</html>
