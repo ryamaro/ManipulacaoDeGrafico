@@ -11,109 +11,121 @@
 </head>
 
 <body>
+    <div class="container-fluid my-3 px-4">
 
-    <div class="container my-4">
-        <div class="row text-center mt-3">
-            <div class="col col-lg-4">
-                <h3>titulo</h3>
-            </div>
-            <div class="col col-lg-4">
-                <h3>
-                    <select onchange="preencherCampos()" name="slctEixoH" id="slctEixoH">
-                        <option value="">Editar</option>
-                    </select>
-                </h3>
-            </div>
-            <div class="col col-lg-4">
-                <h3>ESTILIZAÇÃO</h3>
-            </div>
-        </div>
         <div class="row">
-            <div class="col">
-                <div class="row mt-3 mb-2">
-                    <div class="col col-lg-5">
-                        <label for="txtTitulo">Eixo Horizontal:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="text" name="txtEixoH" id="txtEixoH">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-lg-5">
-                        <label for="txtTitulo">Valor:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="text" name="txtValores" id="txtValores">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="row mt-3 mb-2">
-                    <div class="col col-lg-5">
-                        <label for="txtEditarEixoH">Eixo Horizontal:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="text" name="txtEditarEixoH" id="txtEditarEixoH">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-lg-5">
-                        <label for="txtEditarValores">Valor:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="hidden" name="txtIndex" id="txtIndex">
-                        <input type="text" name="txtEditarValores" id="txtEditarValores">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row mt-3 mb-2">
-                    <div class="col col-lg-4">
-                        <label for="txtTitulo">Titulo:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="text" name="txtTitulo" id="txtTitulo" value="Titulo">
-                    </div>
-                    <div class="col col-lg-1">
-                        <button type="button" class="btn btn-primary btn-atualizar btn-sm"
-                            onclick="atualizarTitulo()">↻</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-lg-4">
-                        <label for="txtTitulo">Legenda:</label>
-                    </div>
-                    <div class="col col-lg-7">
-                        <input type="text" name="txtLegenda" id="txtLegenda" value="Legenda">
-                    </div>
-                    <div class="col col-lg-1">
-                        <button type="button" class="btn btn-primary btn-atualizar btn-sm"
-                            onclick="atualizarLegenda()">↻</button>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col col-lg-4 text-center">
-                <button type="button" class="btn btn-primary" onclick="adicionar()">GERAR</button>
-            </div>
-            <div class="col col-lg-4 text-center">
-                <button type="button" class="btn btn-primary" onclick="atualizar()">Atualizar</button>
-            </div>
-        </div>
-        <div class="row text-center">
             <div class="col col-lg-8">
-                    <canvas id="myChart"></canvas>
+                <div class="row text-center mt-3">
+                    <div class="col col-lg-6">
+                        <h3>titulo</h3>
+                    </div>
+                    <div class="col col-lg-6">
+                        <h3>
+                            <select onchange="preencherCampos()" name="slctEixoH" id="slctEixoH">
+                                <option value="">Editar</option>
+                            </select>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row mt-3 mb-2">
+                            <div class="col col-lg-5">
+                                <label for="txtEixoH">Eixo Horizontal:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="text" name="txtEixoH" id="txtEixoH">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-5">
+                                <label for="txtValores">Valor:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="text" name="txtValores" id="txtValores">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="row mt-3 mb-2">
+                            <div class="col col-lg-5">
+                                <label for="txtEditarEixoH">Eixo Horizontal:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="text" name="txtEditarEixoH" id="txtEditarEixoH">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-5">
+                                <label for="txtEditarValores">Valor:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="hidden" name="txtIndex" id="txtIndex">
+                                <input type="text" name="txtEditarValores" id="txtEditarValores">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col col-lg-6 text-center">
+                        <button type="button" class="btn btn-primary" onclick="adicionar()">GERAR</button>
+                    </div>
+                    <div class="col col-lg-6 text-center">
+                        <button type="button" class="btn btn-primary" onclick="atualizar()">Atualizar</button>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col col-lg-12">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="col col-lg 4">
+
+
+
+
+            <div class="col col-lg-4">
+                <div class="row text-center mt-3">
+                    <div class="col col-lg-12">
+                        <h3>ESTILIZAÇÃO</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row mt-3 mb-2">
+                            <div class="col col-lg-4">
+                                <label for="txtTitulo">Titulo:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="text" name="txtTitulo" id="txtTitulo" value="Titulo">
+                            </div>
+                            <div class="col col-lg-1">
+                                <button type="button" class="btn btn-primary btn-atualizar btn-sm"
+                                    onclick="atualizarTitulo()">↻</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-4">
+                                <label for="txtTitulo">Legenda:</label>
+                            </div>
+                            <div class="col col-lg-7">
+                                <input type="text" name="txtLegenda" id="txtLegenda" value="Legenda">
+                            </div>
+                            <div class="col col-lg-1">
+                                <button type="button" class="btn btn-primary btn-atualizar btn-sm"
+                                    onclick="atualizarLegenda()">↻</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
         </div>
     </div>
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
